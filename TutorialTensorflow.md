@@ -1,7 +1,7 @@
 # TensorFlow
-TensorFlow es una librería open source de google que permite crear applicaciónes de machine learning. En este tutorial se mostrará una introducción a la librería y lgunos ejemplos de uso.
+TensorFlow es una librería open source de google que permite crear applicaciónes de machine learning. En este tutorial se mostrará una introducción a la librería y algunos ejemplos de uso.
 
-Es importante que para hacer uso de [tensorflow_gpu](https://www.tensorflow.org/install/gpu) se necesita instalar [CUDA](https://developer.nvidia.com/cuda-toolkit-archive) y [cuDNN](https://developer.nvidia.com/cudnn), en caso contrario tf seguira utilizando la cpu del equipo para crear y correr los modelos y redes.
+Es importante que para hacer uso de [tensorflow_gpu](https://www.tensorflow.org/install/gpu) se necesita instalar [CUDA](https://developer.nvidia.com/cuda-toolkit-archive) (en adelante tf) y [cuDNN](https://developer.nvidia.com/cudnn), en caso contrario tf seguira utilizando la cpu del equipo para crear y correr los modelos y redes.
 
 ## Documentación
 TensorFlow tiene APIs para muchos lenguajes de programación, pero cabe mencionar que la API mas completa y con mayor estabilidad y facilidad de uso es la de python. 
@@ -9,13 +9,13 @@ TensorFlow tiene APIs para muchos lenguajes de programación, pero cabe menciona
 
 Una lista completa de la documentación se puede encontrar [aquí](https://www.tensorflow.org/api_docs/python/).
 
-Es importante decir que a partir de la version 2.0 de TensorFlow, muchas funciones usadas popularmente en estructuras de red comunes ya no estan implementadas, para esto se puede utilizar:
+Es importante decir que a partir de la version 2.0 de TensorFlow, muchas funciones usadas popularmente en estructuras de red comunes ya no estan implementadas. Para esto se puede utilizar:
 
 ```python
 import tensorflow as tf
 tf.compat.v1.<funcion_de_la_version_1.0>
 ```
-Para checkear que version esta siendo utilizada:
+Para checkear qué version está siendo utilizada:
 ```python
 import tensorflow as tf
 tf.version()
@@ -45,7 +45,7 @@ for device in gpu_devices:
     tf.config.experimental.set_memory_growth(device, True)
 ```
 
-## Ejemplo básicos
+## Ejemplos básicos
 *[Red clasificadora](https://github.com/CreativAI-UC/Tutoriales/blob/master/ejemplo_red_clasificadora.ipynb)
 
 *[GAN](https://github.com/CreativAI-UC/Tutoriales/blob/master/Gan.ipynb)
